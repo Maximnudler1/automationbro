@@ -4,6 +4,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+from PageObject.home import HomePage
+from PageObject.my_account import MyAccount
+
 
 @pytest.fixture()
 def setup(request):
@@ -17,3 +20,7 @@ def setup(request):
     driver.close()
 
 
+@pytest.fixture()
+def my_account(driver):
+    my_account = MyAccount(driver)
+    return my_account

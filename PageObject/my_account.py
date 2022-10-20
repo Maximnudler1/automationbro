@@ -1,11 +1,16 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
+from Utilities.BaseClass import BaseClass
 
-class MyAccount:
+
+class MyAccount():
 
     def __init__(self, driver):
         self.driver = driver
+
+
+
 
     """Register"""
     user_name = (By.CSS_SELECTOR, '#reg_username')

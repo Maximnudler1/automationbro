@@ -2,11 +2,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 
+from Utilities.BaseClass import BaseClass
 
-class HomePage:
 
-    def __init__(self, driver):
-        self.driver = driver
+class HomePage(BaseClass):
+
+    # def __init__(self, driver):
+    #     self.driver = driver
 
     """navigation bar"""
 

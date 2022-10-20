@@ -13,6 +13,8 @@ class ShopPage:
     search_input = (By.CSS_SELECTOR, 'woocommerce-product-search-field-0')
     search_button = (By.CSS_SELECTOR,'button[type=submit]')
 
+    all_element_prices = (By.CSS_SELECTOR, '.woocommerce-Price-amount')
+
     branded_converse_link = (By.XPATH,'//h2[text()="Branded Converse"]')
     branded_converse_add_to_cart = (By.CSS_SELECTOR,'a[data-product_id="359"]')
 
@@ -57,9 +59,6 @@ class ShopPage:
 
     zurich_watch = (By.XPATH, '//h2[text()="Zurich Watch"]')
     zurich_watch_add_to_cart = (By.XPATH, 'a[data-product_id="378"]')
-
-
-    all_element_prices = (By.CSS_SELECTOR, '.woocommerce-Price-amount')
 
     def sort_by(self, value):
         select = Select(self.driver.find_element(*ShopPage.sorting))
