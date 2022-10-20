@@ -6,9 +6,9 @@ pipeline {
         sh 'python3 --version'
       }
     }
-    stage('hello') {
+    stage('Tests') {
       steps {
-        sh 'python3 test_home_page.py'
+        sh 'venv/bin -c "pytest"'
       }
     }
   }
