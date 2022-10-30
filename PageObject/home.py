@@ -7,8 +7,7 @@ from Utilities.BaseClass import BaseClass
 
 class HomePage(BaseClass):
 
-    # def __init__(self, driver):
-    #     self.driver = driver
+
 
     """navigation bar"""
 
