@@ -64,8 +64,12 @@ class ShopPage(BaseClass):
         select = Select(self.driver.find_element(*ShopPage.sorting))
         return select.select_by_value(value)
 
+    def click_on_branded_converse_link(self):
+        return self.driver.find_element(*ShopPage.branded_converse_link)
+
     def add_to_cart_branded_converse(self):
         return self.driver.find_element(*ShopPage.branded_converse_add_to_cart)
+
 
     def element_prices(self):
         return self.driver.find_elements(*ShopPage.all_element_prices)

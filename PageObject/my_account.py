@@ -6,7 +6,6 @@ from Utilities.BaseClass import BaseClass
 
 class MyAccount(BaseClass):
 
-
     """Register"""
     user_name = (By.CSS_SELECTOR, '#reg_username')
     email_address = (By.CSS_SELECTOR, '#reg_email')

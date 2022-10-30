@@ -23,3 +23,14 @@ class TestShopPage(ShopPage, HomePage):
             lis += [float(product.text[1:])]
         sorted_list = sorted(lis, reverse=True)
         assert sorted_list[0] == 500.00
+
+    def test_open_branded_converse_link(self):
+        self.open_shop_page().click()
+        self.click_on_branded_converse_link().click()
+        assert "branded-converse" in self.driver.current_url
+
+    def test_open_branded_converse_link_description(self):
+        self.open_shop_page().click()
+        self.click_on_branded_converse_link().click()
+        assert "branded converse" in self.get_element(".woocommerce-product-details__short-description p").text
+
