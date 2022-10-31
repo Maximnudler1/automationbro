@@ -3,6 +3,7 @@ from PageObject.home import HomePage
 
 
 class TestShopPage(ShopPage, HomePage):
+
     def test_sort_price_by_price_asc(self):
         self.open_shop_page().click()
         self.sort_by("price")
@@ -23,6 +24,12 @@ class TestShopPage(ShopPage, HomePage):
             lis += [float(product.text[1:])]
         sorted_list = sorted(lis, reverse=True)
         assert sorted_list[0] == 500.00
+
+    def test_sort_latest(self):
+        self.open_shop_page().click()
+        self.sort_by('date')
+        products_element = self.get_elements("#primary h2")
+        assert products_element[0].text == 'Zurich Watch'
 
     def test_open_branded_converse_link(self):
         self.open_shop_page().click()

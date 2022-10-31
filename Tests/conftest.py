@@ -19,10 +19,6 @@ def setup(request):
     driver.close()
 
 
-# @pytest.fixture()
-# def my_account(driver):
-#     my_account = MyAccount(driver)
-#     return my_account
 
 
 

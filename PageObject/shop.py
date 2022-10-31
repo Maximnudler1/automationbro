@@ -70,7 +70,6 @@ class ShopPage(BaseClass):
     def add_to_cart_branded_converse(self):
         return self.driver.find_element(*ShopPage.branded_converse_add_to_cart)
 
-
     def element_prices(self):
         return self.driver.find_elements(*ShopPage.all_element_prices)
 
