@@ -11,6 +11,7 @@ from PageObject.my_account import MyAccount
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 from selenium import webdriver
+from seleniumbase import BaseCase as driver
 
 
 browsers =  ['firefox','chrome']
@@ -38,8 +39,8 @@ def setup(request):
     #         )
     # driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",
     #                           desired_capabilities=desired_capabilities.DesiredCapabilities.FIREFOX)
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-
+    # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver = webdriver.Chrome()
     driver.get("https://practice.automationbro.com/")
     # driver.maximize_window()
     # driver.set_window_position(0, 0) and driver.set_window_size(1920, 1080)
