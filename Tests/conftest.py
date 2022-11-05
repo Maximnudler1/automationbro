@@ -20,7 +20,7 @@ browsers =  ['firefox','chrome']
 
 @pytest.fixture()
 def setup(request):
-    for browser_name in browsers:
+    # for browser_name in browsers:
 
         # if browser_name == "chrome":
     #
@@ -40,7 +40,7 @@ def setup(request):
     # driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",
     #                           desired_capabilities=desired_capabilities.DesiredCapabilities.FIREFOX)
     # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver = webdriver.Chrome()
+
     driver.get("https://practice.automationbro.com/")
     # driver.maximize_window()
     # driver.set_window_position(0, 0) and driver.set_window_size(1920, 1080)
