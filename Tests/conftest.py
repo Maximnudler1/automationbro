@@ -20,7 +20,7 @@ browsers =  ['firefox','chrome']
 
 @pytest.fixture()
 def setup(request):
-    # for browser_name in browsers:
+    for browser_name in browsers:
 
         # if browser_name == "chrome":
     #
