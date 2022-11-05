@@ -39,7 +39,7 @@ def setup(request):
     #         )
     # driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",
     #                           desired_capabilities=desired_capabilities.DesiredCapabilities.FIREFOX)
-    # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
     driver.get("https://practice.automationbro.com/")
     # driver.maximize_window()
