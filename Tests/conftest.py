@@ -24,10 +24,10 @@ def setup(request):
 
         # if browser_name == "chrome":
     #
-    chrome_options = webdriver.ChromeOptions()
-    driver = webdriver.Remote(
-        command_executor="http://localhost:4444/wd/hub",
-        options=chrome_options
+    # chrome_options = webdriver.ChromeOptions()
+    # driver = webdriver.Remote(
+    #     command_executor="http://localhost:4444/wd/hub",
+    #     options=chrome_options
     )
     #     elif browser_name == "firefox":
     #
@@ -39,7 +39,7 @@ def setup(request):
     #         )
     # driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",
     #                           desired_capabilities=desired_capabilities.DesiredCapabilities.FIREFOX)
-    # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
     driver.get("https://practice.automationbro.com/")
     # driver.maximize_window()
