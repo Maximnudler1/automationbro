@@ -28,7 +28,7 @@ def setup(request):
     # driver = webdriver.Remote(
     #     command_executor="http://localhost:4444/wd/hub",
     #     options=chrome_options
-    )
+    # )
     #     elif browser_name == "firefox":
     #
     #         firefox_options = webdriver.FirefoxOptions()
