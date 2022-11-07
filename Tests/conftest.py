@@ -11,8 +11,6 @@ from PageObject.my_account import MyAccount
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 from selenium import webdriver
-from seleniumbase import BaseCase as driver
-
 
 browsers =  ['firefox','chrome']
 
@@ -23,23 +21,16 @@ def setup(request):
     # for browser_name in browsers:
 
         # if browser_name == "chrome":
-    #
-    # chrome_options = webdriver.ChromeOptions()
-    # driver = webdriver.Remote(
-    #     command_executor="http://localhost:4444/wd/hub",
-    #     options=chrome_options
-    # )
-    #     elif browser_name == "firefox":
-    #
-    #         firefox_options = webdriver.FirefoxOptions()
-    #         driver = webdriver.Remote(
-    #             command_executor='http://localhost:4444/wd/hub',
-    #             options=firefox_options
-    #
-    #         )
-    # driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",
-    #                           desired_capabilities=desired_capabilities.DesiredCapabilities.FIREFOX)
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--window-size=1420,1080')
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-gpu')
+    driver = webdriver.Chrome(
+        chrome_options=chrome_options)
+
+
+
 
     driver.get("https://practice.automationbro.com/")
     # driver.maximize_window()
